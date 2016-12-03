@@ -1,0 +1,6 @@
+{
+    "package-name": "cmsplugin-survey",
+    "installed-apps": [
+        "cmsplugin_survey"
+    ]
+}
