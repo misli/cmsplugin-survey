@@ -6,12 +6,12 @@ This django CMS plugin lets editors add simple surveys into the pages.
 
 ## installation
 
-1. Install '''cmsplugin_survey''' package.
+1. Install *cmsplugin_survey* package.
   ```bash
   pip install cmsplugin-survey
   ```
 
-2. Add '''cmsplugin_survey''' package into your INSTALLED_APPS.
+2. Add *cmsplugin_survey* package into your INSTALLED_APPS.
   ```python
   INSTALLED_APPS = [
     ...
@@ -20,7 +20,7 @@ This django CMS plugin lets editors add simple surveys into the pages.
   ]
   ```
 
-3. Add '''cmsplugin_suvery.urls''' into your project's url configuration.
+3. Add *cmsplugin_suvery.urls* into your project's url configuration.
   ```python
   import cmsplugin_survey.urls
 
