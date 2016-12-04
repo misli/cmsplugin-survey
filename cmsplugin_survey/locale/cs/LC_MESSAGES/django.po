@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-03 16:01+0100\n"
+"POT-Creation-Date: 2016-12-04 02:33+0100\n"
 "Last-Translator: Jakub Dorňák <jakub.dornak@misli.cz>\n"
 "Language: Czech\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +96,14 @@ msgstr "šablona"
 msgid "The template used to render plugin."
 msgstr "Šablona použitá pro vykreslení obsahu."
 
-#: templates/cmsplugin_survey/default.html:23
+#: templates/cmsplugin_survey/default.html:24
 #, python-format
-msgid "%(count)s visitors participated."
-msgstr "%(count)s návštěvníků hlasovalo."
+msgid "One visitor voted."
+msgid_plural "%(count)s visitors voted."
+msgstr[0] "Hlasoval jeden návštěvník."
+msgstr[1] "Hlasovali %(count)s návštěvníci."
+msgstr[2] "Hlasovalo %(count)s návštěvníků."
+
+#: templates/cmsplugin_survey/default.html:26
+msgid "Nobody voted yet. Be first!"
+msgstr "Zatím nikdo nehlasoval. Buďte první!"

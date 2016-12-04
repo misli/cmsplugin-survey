@@ -20,6 +20,10 @@
     </div>
     {% endfor %}
     <div class="summary">
-        {% blocktrans with count=question.votes_count %}{{ count }} visitors participated.{% endblocktrans %}
+        {% if question.votes_count > 0 %}
+        {% blocktrans count question.votes_count as count %}One visitor voted.{% plural %}{{ count }} visitors voted.{% endblocktrans %}
+        {% else %}
+        {% trans 'Nobody voted yet. Be first!' %}
+        {% endif %}
     </div>
 </div>
