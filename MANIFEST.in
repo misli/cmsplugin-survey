@@ -1,4 +1,6 @@
 include LICENSE
-recursive-include */templates *
-recursive-include */static *
+include README.md
 recursive-include */locale *
+recursive-include */static *
+recursive-include */templates *
+recursive-exclude * *.py[co]

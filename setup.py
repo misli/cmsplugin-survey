@@ -12,6 +12,9 @@ setup(
     url             = 'https://github.com/misli/cmsplugin-survey',
     packages        = find_packages(),
     include_package_data = True,
+    install_requires = [
+        'django-cms',
+    ],
     classifiers     = [
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
