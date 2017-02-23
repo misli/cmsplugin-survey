@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
+from django import forms
 from django.db import models
-
 from cms.models import CMSPlugin
 from django.core.urlresolvers import reverse_lazy as reverse
 from django.db import models
@@ -61,6 +61,15 @@ class Question(models.Model):
         else:
             self.users_voted.add(request.user)
 
+    @cached_property
+    def answer_form_class(self):
+        class AnswerForm(forms.Form):
+            answer = forms.ModelChoiceField(
+                empty_label=None,
+                queryset=self.answers.all(),
+                widget=forms.widgets.RadioSelect(attrs={'class': 'survey-input'}),
+            )
+        return AnswerForm
 
 
 @python_2_unicode_compatible
@@ -83,6 +92,11 @@ class Answer(models.Model):
     def votes_count(self):
         return self.votes.count()
 
+    @cached_property
+    def percents(self):
+        return int(round(
+            self.votes_count * 100.0 / self.question.votes_count
+        )) if self.question.votes_count else 0
 
 
 class Vote(models.Model):

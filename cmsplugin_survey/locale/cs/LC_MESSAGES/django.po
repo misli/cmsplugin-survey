@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-04 02:33+0100\n"
+"POT-Creation-Date: 2017-02-23 14:16+0100\n"
 "Last-Translator: Jakub Dorňák <jakub.dornak@misli.cz>\n"
 "Language: Czech\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr "výchozí"
 msgid "Enter a valid hex color."
 msgstr "Enter a valid hex color."
 
-#: models.py:20 models.py:31 models.py:68 models.py:102
+#: models.py:20 models.py:31 models.py:77 models.py:116
 msgid "question"
 msgstr "otázka"
 
@@ -60,43 +60,47 @@ msgstr "hlasování uzavřeno"
 msgid "questions"
 msgstr "otázky"
 
-#: models.py:69 models.py:76 models.py:89
+#: models.py:78 models.py:85 models.py:103
 msgid "answer"
 msgstr "odpověď"
 
-#: models.py:70
+#: models.py:79
 msgid "color"
 msgstr "barva"
 
-#: models.py:71
+#: models.py:80
 msgid "order"
 msgstr "pořadí"
 
-#: models.py:77
+#: models.py:86
 msgid "answers"
 msgstr "odpovědi"
 
-#: models.py:90
+#: models.py:104
 msgid "time"
 msgstr "čas"
 
-#: models.py:95
+#: models.py:109
 msgid "vote"
 msgstr "hlas"
 
-#: models.py:96
+#: models.py:110
 msgid "votes"
 msgstr "hlasy"
 
-#: models.py:103
+#: models.py:117
 msgid "template"
 msgstr "šablona"
 
-#: models.py:106
+#: models.py:120
 msgid "The template used to render plugin."
 msgstr "Šablona použitá pro vykreslení obsahu."
 
-#: templates/cmsplugin_survey/default.html:24
+#: templates/cmsplugin_survey/default.html:31
+msgid "Save vote"
+msgstr "Uložit hlas"
+
+#: templates/cmsplugin_survey/default.html:37
 #, python-format
 msgid "One visitor voted."
 msgid_plural "%(count)s visitors voted."
@@ -104,6 +108,6 @@ msgstr[0] "Hlasoval jeden návštěvník."
 msgstr[1] "Hlasovali %(count)s návštěvníci."
 msgstr[2] "Hlasovalo %(count)s návštěvníků."
 
-#: templates/cmsplugin_survey/default.html:26
+#: templates/cmsplugin_survey/default.html:39
 msgid "Nobody voted yet. Be first!"
 msgstr "Zatím nikdo nehlasoval. Buďte první!"

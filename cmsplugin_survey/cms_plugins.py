@@ -18,6 +18,7 @@ class CmspluginSurveyPlugin(CMSPluginBase):
     def render(self, context, instance, placeholder):
         context = super(CmspluginSurveyPlugin, self).render(context, instance, placeholder)
         context['question'] = instance.question
+        context['form'] = instance.question.answer_form_class(prefix='survey-plugin-{}'.format(instance.id))
         context['can_vote'] = instance.question.can_vote(context['request']) if 'request' in context else False
         return context
 
