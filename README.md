@@ -22,11 +22,11 @@ This django CMS plugin lets editors add simple surveys into the pages.
 
 3. Add *cmsplugin_suvery.urls* into your project's url configuration.
   ```python
-  import cmsplugin_survey.urls
+  from django.conf.urls import url, include
 
   urlpatterns = [
     ...
-    url(r'^survey/', (cmsplugin_survey.urls, 'survey', 'survey')),
+    url(r'^survey/', include('cmsplugin_survey.urls')),
     ...
   ]
   ```
