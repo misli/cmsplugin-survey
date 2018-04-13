@@ -13,7 +13,7 @@
     {% endif %}
 
     {% for item in form.answer %}
-    {% with answer=item.choice_value|answer %}
+    {% with answer=item.data.value|answer %}
     <div class="survey-answer">
         {% if can_vote %}{{ item }}{% else %}{{ answer.answer }}{% endif %}
     </div>

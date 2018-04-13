@@ -9,6 +9,6 @@ register = template.Library()
 @register.filter
 def answer(answer_id):
     try:
-        return Answer.objects.get(id=answer_id)
+        return answer_id and Answer.objects.get(id=answer_id)
     except Answer.DoesNotExist:
         return None
