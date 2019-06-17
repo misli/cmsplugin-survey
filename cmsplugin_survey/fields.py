@@ -1,13 +1,16 @@
 from __future__ import unicode_literals
 
 import re
+
 from django import forms
-from django.db import models
 from django.core.validators import RegexValidator
+from django.db import models
 from django.utils.translation import ugettext_lazy as _
+
 
 class ColorInput(forms.TextInput):
     input_type = 'color'
+
 
 class ColorField(models.CharField):
     default_validators = [RegexValidator(
@@ -23,6 +26,3 @@ class ColorField(models.CharField):
     def formfield(self, **kwargs):
         kwargs['widget'] = ColorInput
         return super(ColorField, self).formfield(**kwargs)
-
-
-

@@ -9,9 +9,9 @@ from .models import QuestionPlugin
 
 @plugin_pool.register_plugin
 class CmspluginSurveyPlugin(CMSPluginBase):
-    name    = _('Survey')
-    model   = QuestionPlugin
-    cache   = False
+    name = _('Survey')
+    model = QuestionPlugin
+    cache = False
     text_enabled = True
     raw_id_fields = ('question',)
 
@@ -24,4 +24,3 @@ class CmspluginSurveyPlugin(CMSPluginBase):
 
     def get_render_template(self, context, instance, placeholder):
         return 'cmsplugin_survey/{}.html'.format(instance.template)
-

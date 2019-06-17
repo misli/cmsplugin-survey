@@ -6,6 +6,7 @@ from ..models import Answer
 
 register = template.Library()
 
+
 @register.filter
 def answer(answer_id):
     try:
