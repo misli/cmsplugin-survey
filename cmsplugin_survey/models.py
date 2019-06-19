@@ -76,7 +76,7 @@ class Question(models.Model):
 
 @python_2_unicode_compatible
 class Answer(models.Model):
-    question = models.ForeignKey(Question, verbose_name=_('question'), related_name='answers')
+    question = models.ForeignKey(Question, verbose_name=_('question'), related_name='answers', on_delete=models.CASCADE)
     answer = models.CharField(_('answer'), max_length=150)
     color = ColorField(_('color'))
     order = models.IntegerField(_('order'), blank=True, default=0)
@@ -102,7 +102,7 @@ class Answer(models.Model):
 
 
 class Vote(models.Model):
-    answer = models.ForeignKey(Answer, verbose_name=_('answer'), related_name='votes')
+    answer = models.ForeignKey(Answer, verbose_name=_('answer'), related_name='votes', on_delete=models.CASCADE)
     created = models.DateTimeField(_('time'), auto_now_add=True)
 
     class Meta:
@@ -114,7 +114,7 @@ class Vote(models.Model):
 
 @python_2_unicode_compatible
 class QuestionPlugin(CMSPlugin):
-    question = models.ForeignKey(Question, verbose_name=_('question'))
+    question = models.ForeignKey(Question, verbose_name=_('question'), on_delete=models.CASCADE)
     template = models.CharField(
         _('template'), max_length=100,
         choices=settings.CMSPLUGIN_SURVEY_TEMPLATES,
