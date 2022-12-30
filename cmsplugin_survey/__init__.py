@@ -1,1 +1,1 @@
-default_app_config = 'cmsplugin_survey.apps.CmspluginSurveyConfig'
+default_app_config = "cmsplugin_survey.apps.CmspluginSurveyConfig"

@@ -6,7 +6,7 @@ from .models import Answer, Question
 class AnswerInlineAdmin(admin.TabularInline):
     model = Answer
     extra = 0
-    ordering = ('order',)
+    ordering = ("order",)
 
 
 class QuestionAdmin(admin.ModelAdmin):
