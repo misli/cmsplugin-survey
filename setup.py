@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name            = 'cmsplugin-survey',
-    version         = '1.3.0',
+    version         = '1.4.0',
     description     = 'django CMS plugin to show simple surveys',
     author          = 'Jakub Dorňák',
     author_email    = 'jakub.dornak@misli.cz',
